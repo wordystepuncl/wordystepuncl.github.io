@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Explore four interactive crypto demos for ETH, BTC and BNB: cross-exchange arbitrage, grid trading, DCA backtesting and paper price triggers.">
+  <title>Crypto Trading Strategy Demos</title>
+  <style>
+    :root { font: 16px system-ui, sans-serif; color: #f2f3f8; background: #12131a; }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    main { max-width: 58rem; margin: auto; padding: clamp(2rem, 8vw, 6rem) 1.25rem; }
+    h1 { max-width: 17ch; margin: 0; font-size: clamp(2.5rem, 8vw, 5rem); line-height: 1.02; letter-spacing: -.06em; }
+    header p { color: #b6bbcd; max-width: 55ch; margin: 1.2rem 0 0; line-height: 1.55; }
+    ul { list-style: none; padding: 0; margin: 2.25rem 0 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .85rem; }
+    .demo { --accent: #c4a8ff; display: grid; grid-template-columns: 1fr auto; gap: .4rem .75rem; height: 100%; align-content: start; padding: 1.2rem; text-decoration: none; color: inherit; background: #191b24; border: 1px solid #353849; border-top: 2px solid var(--accent); border-radius: .55rem; }
+    .demo:hover { background: #222532; }
+    .demo:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+    .demo span { color: var(--accent); font-size: .75rem; letter-spacing: .13em; font-weight: 700; }
+    .demo .arrow { grid-row: span 2; align-self: center; font-size: 1.25rem; }
+    .demo strong { font-size: 1.3rem; }
+    .demo p { grid-column: 1 / -1; color: #b6bbcd; margin: .45rem 0 0; line-height: 1.45; }
+    .grid { --accent: #7ae2cf; }
+    .dca { --accent: #a9bcff; }
+    .sniping { --accent: #ffab70; }
+    @media (max-width: 38rem) { ul { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Crypto trading strategy demos</h1>
+      <p>Explore ETH, BTC and BNB with live spot quotes, historical data and interactive strategy simulations.</p>
+    </header>
+    <nav aria-label="Strategy demos">
+      <ul>
+        <li><a class="demo" href="./arbitrage/"><span>PARALLAX</span><span class="arrow" aria-hidden="true">↗</span><strong>Cross-exchange arbitrage</strong><p>Compare bid and ask prices and see how trading costs affect the spread.</p></a></li>
+        <li><a class="demo grid" href="./grid/"><span>WAVEFORM</span><span class="arrow" aria-hidden="true">↗</span><strong>Grid trading</strong><p>Build a price grid and see what happens as the market crosses its levels.</p></a></li>
+        <li><a class="demo dca" href="./dca/"><span>TEMPO</span><span class="arrow" aria-hidden="true">↗</span><strong>Dollar-cost averaging</strong><p>Replay recurring purchases on historical prices and compare them with a lump sum.</p></a></li>
+        <li><a class="demo sniping" href="./sniping/"><span>PULSE</span><span class="arrow" aria-hidden="true">↗</span><strong>Price-triggered paper entries</strong><p>Choose an exchange, set a price target and watch for a simulated entry.</p></a></li>
+      </ul>
+    </nav>
+  </main>
+</body>
+</html>
